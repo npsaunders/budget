@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Budgets</title>
+</head>
+
+<body>
+  <h1>Budgets</h1>
+  <ul>
+    <% for(let i=0; i < budget.length; i++) { %>
+      <li>
+        <a href="/budgets/<%=i%>">
+          <%=budget[i].name %>
+        </a>
+      </li>
+      <% } %>
+  </ul>
+</body>
+
+</html>

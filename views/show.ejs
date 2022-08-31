@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Budgets</title>
+</head>
+
+<body>
+  <h1>Budgets</h1>
+
+  <div class="budgets">
+    <p>
+      Date: <%= budget.date %>
+    </p>
+    <p>
+      Name: <%= budget.name %>
+    </p>
+    <p>
+      From: <%= budget.from %>
+    </p>
+    <p>
+      Amount: $<%= budget.amount %>
+    </p>
+    <%for(let i=0;i < budget.tags.length; i++) {%>
+      <ul>
+        <li>
+          <%=budget.tags[i]%>
+        </li>
+      </ul>
+      <%}%>
+  </div>
+</body>
+
+</html>

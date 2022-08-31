@@ -4,8 +4,16 @@ const app = express();
 const port = 3000;
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("hi")
+app.get("/budgets", (req, res) => {
+  res.render("index.ejs", {
+    budget: budgets
+  })
+})
+
+app.get("/budgets/:indexBudget", (req, res) => {
+  res.render("show.ejs", {
+    budget: budgets[req.params.indexBudget]
+  })
 })
 
 // Listener
