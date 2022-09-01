@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <h1>New Budget Entry</h1>
-  <form action="/budgets" method="POST">
-    <div class="forms">
-      Date: <input type="date" name="date" /><br />
-      Name: <input type="text" name="name" /><br />
-      From: <input type="text" name="from" /><br />
-      Amount: <input type="number" name="amount" /><br />
-      Tag: <input type="text" name="tags" value="" /><br />
-      Tag: <input type="text" name="tags" value="" /><br />
-      Tag: <input type="text" name="tags" value="" /><br />
+  <div class="container">
+    <h1>New Budget Entry</h1>
+    <form action="/budgets" method="POST">
+      <input type="text" name="date" placeholder="Date" /><br />
+      <input type="text" name="name" placeholder="Name" /><br />
+      <input type="text" name="from" placeholder="From" /><br />
+      <input type="number" name="amount" placeholder="Amount" /><br />
+      <input type="text" name="tags" value="" placeholder="Tag" /><br />
+      <input type="text" name="tags" value="" placeholder="Tag" /><br />
+      <input type="text" name="tags" value="" placeholder="Tag" /><br />
       <input type="submit" value="Create Budget" />
-    </div>
+  </div>
 
   </form>
 
