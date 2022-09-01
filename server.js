@@ -26,7 +26,6 @@ app.get("/budgets/new", (req, res) => {
 // U
 // C - CREATE
 app.post("/budgets", (req, res) => {
-  console.log(req.body)
   budgets.push(req.body)
   res.redirect("/budgets")
 })
