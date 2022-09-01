@@ -1,0 +1,11 @@
+.negAcctBal {
+  background-color: rgb(243, 138, 138);
+}
+
+.posAcctBal {
+  background-color: rgb(135, 236, 135);
+}
+
+.acctBal {
+  background-color: white;
+}

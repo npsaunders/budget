@@ -11,21 +11,36 @@
 
 <body>
   <h1>Budgtr</h1>
-  <table>
-    <% for(let i=0; i < budget.length; i++) { %>
-      <tr>
-        <td>
-          <%=budget[i].date%>
-        </td>
-        <td><a href="/budgets/<%=i%>">
-            <%=budget[i].name %>
-          </a></td>
-        <td>
-          <%=budget[i].amount%>
-        </td>
-        <% } %>
-  </table>
-  <a class="button button-primary" href="/budgets/new">New Item</a>
+  <%let bankAccount=0%>
+    <% for (let i=0; i < budget.length; i++) bankAccount +=parseInt(budget[i].amount) %>
+
+      <%if(bankAccount <0) {%>
+
+        <body style="background-color: red" />
+        <%} else if( bankAccount> 1000) {%>
+
+          <body style="background-color: green" />
+          <%} else {%>
+
+            <body style="background-color: white" />
+            <%}%>
+              <h4>Bank Account Balance: $<%=bankAccount%>
+              </h4>
+              <table>
+                <% for(let i=0; i < budget.length; i++) { %>
+                  <tr>
+                    <td>
+                      <%=budget[i].date%>
+                    </td>
+                    <td><a href="/budgets/<%=i%>">
+                        <%=budget[i].name %>
+                      </a></td>
+                    <td>
+                      <%=budget[i].amount%>
+                    </td>
+                    <% } %>
+              </table>
+              <a class="button button-primary" href="/budgets/new">New Item</a>
 </body>
 
 </html>
