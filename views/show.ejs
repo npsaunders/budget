@@ -10,29 +10,22 @@
 </head>
 
 <body>
-  <h1>Budgets</h1>
+  <div class="container">
+    <h1>
+      <%= budget.name %>
+    </h1>
+    <a class="button button-primary" href="/budgets/">Back</a>
+    <br />
+    <strong>date:</strong>
+    <%= budget.date %><br />
+      <strong>from:</strong>
+      <%= budget.from %><br />
+        <strong>amount:</strong>
+        $<%= budget.amount %><br />
+          <strong>tags:</strong>
+          <%= budget.tags.join()%>
 
-  <div class="budgets">
-    <p>
-      Date: <%= budget.date %>
-    </p>
-    <p>
-      Name: <%= budget.name %>
-    </p>
-    <p>
-      From: <%= budget.from %>
-    </p>
-    <p>
-      Amount: $<%=budget.amount %>
-    </p>
-    <ul>
-      <%for(let i=0; i < budget.tags.length; i++) { if(budget.tags[i]){%>
-        <li>
-          <%=budget.tags[i]%>
-        </li>
-        <%}%>
-          <%}%>
-    </ul>
+
   </div>
 </body>
 
