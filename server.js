@@ -5,7 +5,11 @@ const app = express();
 const port = 3000;
 
 // MIDDLEWARE --------------------------- 
+//for parsing the incoming request
 app.use(express.urlencoded({ extended: false }));
+
+//for using CSS
+app.use(express.static("public"));
 
 
 // ROUTES -------------------------------
