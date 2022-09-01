@@ -1,28 +1,39 @@
+// DEPENDENCIES -------------------------
 const express = require("express");
 const budgets = require("./models/budget.js");
 const app = express();
 const port = 3000;
 
-// Routes
+// MIDDLEWARE --------------------------- 
+app.use(express.urlencoded({ extended: false }));
 
-// Index
+
+// ROUTES -------------------------------
+
+// I - INDEX
 app.get("/budgets", (req, res) => {
   res.render("index.ejs", {
     budget: budgets
   })
 })
 
-// N
+// N - NEW
 app.get("/budgets/new", (req, res) => {
   res.render("new.ejs")
 })
 
 // D
 // U
-// C
+// C - CREATE
+app.post("/budgets", (req, res) => {
+  console.log(req.body)
+  budgets.push(req.body)
+  res.redirect("/budgets")
+})
+
 // E
 
-// Show
+// S - SHOW
 app.get("/budgets/:indexBudget", (req, res) => {
   res.render("show.ejs", {
     budget: budgets[req.params.indexBudget]

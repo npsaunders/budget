@@ -20,15 +20,16 @@
       From: <%= budget.from %>
     </p>
     <p>
-      Amount: $<%= budget.amount %>
+      Amount: $<%=budget.amount %>
     </p>
-    <%for(let i=0;i < budget.tags.length; i++) {%>
-      <ul>
+    <ul>
+      <%for(let i=0; i < budget.tags.length; i++) { if(budget.tags[i]){%>
         <li>
           <%=budget.tags[i]%>
         </li>
-      </ul>
-      <%}%>
+        <%}%>
+          <%}%>
+    </ul>
   </div>
 </body>
 
