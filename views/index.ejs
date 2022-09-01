@@ -6,20 +6,25 @@
   <link rel="stylesheet" href="/skeleton.css" />
   <link rel="stylesheet" href="/styles.css">
   <meta charset="UTF-8">
-  <title>Budgets</title>
+  <title>Budgtr</title>
 </head>
 
 <body>
-  <h1>Budgets</h1>
-  <ul>
+  <h1>Budgtr</h1>
+  <table>
     <% for(let i=0; i < budget.length; i++) { %>
-      <li>
-        <a href="/budgets/<%=i%>">
-          <%=budget[i].name %>
-        </a>
-      </li>
-      <% } %>
-  </ul>
+      <tr>
+        <td>
+          <%=budget[i].date%>
+        </td>
+        <td><a href="/budgets/<%=i%>">
+            <%=budget[i].name %>
+          </a></td>
+        <td>
+          <%=budget[i].amount%>
+        </td>
+        <% } %>
+  </table>
 </body>
 
 </html>

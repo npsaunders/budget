@@ -1,5 +1,5 @@
 
-module.exports = [
+Budget = [
   {
     date: "April 1",
     name: "Income",
@@ -72,4 +72,4 @@ module.exports = [
   },
 ];
 
-module.exports = module.exports;
+module.exports = Budget;
